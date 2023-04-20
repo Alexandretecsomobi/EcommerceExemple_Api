@@ -10,12 +10,9 @@ class App {
     this.server = express();
 
     mongoose.connect(
-      "mongodb+srv://alexandredevfrontend:AX0YQVBnlqOOWvTk@ecommercetest.ei6zjzv.mongodb.net/test",
-      {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-      }
+      "mongodb+srv://alexandredevfrontend:AX0YQVBnlqOOWvTk@ecommercetest.ei6zjzv.mongodb.net/test"
     );
+    mongoose.set('strictQuery', false)
 
     this.middlewares();
     this.routes();
